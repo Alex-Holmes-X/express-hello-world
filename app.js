@@ -5,7 +5,7 @@ const port = process.env.PORT || 3001;
 app.get("/", (req, res) => res.type('html').send(html));
 
 app.get('/health', (req, res) => {
-  res.status(200);
+  res.sendStatus(200);
 });
 
 const server = app.listen(port, () => console.log(`Example app listening on port ${port}!`));
@@ -59,8 +59,8 @@ const html = `
   <body>
     <section>
       Hello from Render!
-      Loaded by Alex H
     </section>
+    <h1>By Alex H</h1>
   </body>
 </html>
 `
